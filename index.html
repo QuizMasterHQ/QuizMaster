@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster | Test Your Knowledge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Welcome Screen -->
+<div class="welcome-screen" id="welcome-screen">
+    <h1>QuizMaster</h1>
+<p>Challenge yourself. Test your knowledge.</p>
+
+<label for="difficulty">Choose your difficulty:</label>
+
+<select id="difficulty">
+    <option value="easy">Easy</option>
+    <option value="medium">Medium</option>
+    <option value="hard">Hard</option>
+</select>
+
+<button id="start-btn">Start Quiz</button>
+</div>
+
+<!-- Quiz Screen -->
+<div class="quiz-screen" id="quiz-screen" style="display: none;">
+    <p id="score">Score: 0</p>
+    <p id="question-number">Question 1 of 3</p>
+    <p id="timer">Time left: 20s</p>
+    <p id="timeout-message" style="display: none; color: #ef4444; font-weight: bold;">
+    Time's up! You didn't answer in time.
+</p>
+    <div class="progress-container">
+    <div id="progress-bar"></div>
+</div>
+    <h2 id="question">Question goes here</h2>
+
+<div id="result-circle" class="result-circle" style="display: none;">
+    <span id="result-percentage">0%</span>
+</div>
+<div id="result-message" class="result-message" style="display: none;">
+    <div id="trophy">🏆</div>
+    <h3 id="performance-title">Excellent work!</h3>
+    <p id="performance-description">You did a great job!</p>
+</div>
+<div id="answer-review" style="display: none;">
+    <h2>Review Your Answers</h2>
+    <p class="review-hint">Scroll down to review your answers.</p>
+    <div id="review-list"></div>
+</div>
+    <div id="answer-buttons">
+        <button class="answer-btn">Option A</button>
+        <button class="answer-btn">Option B</button>
+        <button class="answer-btn">Option C</button>
+        <button class="answer-btn">Option D</button>
+    </div>
+
+    <button id="next-btn">Next Question</button>
+    <button id="restart-btn" style="display: none;">Restart Quiz</button>
+</div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
